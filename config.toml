@@ -1,5 +1,5 @@
 baseURL = "https://til.hal.com.mx/"
 languageCode = "es-mx"
 title = "HAL Today I learned"
-theme= "ananke"
+theme="twentynineteen"
 publishdir="docs"
