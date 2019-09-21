@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on HAL Today I learned</title>
+    <link>https://til.hal.com.mx/posts/</link>
+    <description>Recent content in Posts on HAL Today I learned</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-mx</language>
+    <lastBuildDate>Fri, 20 Sep 2019 18:56:30 -0500</lastBuildDate>
+    
+	<atom:link href="https://til.hal.com.mx/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HAL -&gt; Today I Learned</title>
+      <link>https://til.hal.com.mx/posts/presentacion/</link>
+      <pubDate>Fri, 20 Sep 2019 18:56:30 -0500</pubDate>
+      
+      <guid>https://til.hal.com.mx/posts/presentacion/</guid>
+      <description>En este blog compartiremos hallazgos y experiencias de parte de los desarrolladores de HAL, una empresa dedicada a crear productos digitales innovadores.</description>
+    </item>
+    
+  </channel>
+</rss>

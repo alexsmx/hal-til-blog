@@ -1,4 +1,4 @@
-# HAL Today I learn
+# HAL Today I learned
 
 En este blog compartiremos lo que vamos aprendiendo en los proyectos de desarrollo de software.
 
