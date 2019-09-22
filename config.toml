@@ -3,3 +3,8 @@ languageCode = "es-mx"
 title = "HAL Today I learned"
 theme="twentynineteen"
 publishdir="docs"
+[menu]
+    [[menu.social]]
+        identifier = "github"
+        name = "Github"
+        url = "https://github.com/HAL-DEV/hal-til-blog"
