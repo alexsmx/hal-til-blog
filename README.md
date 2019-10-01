@@ -42,6 +42,8 @@ Encontrarás aspectos prácticos de programación, desarrollo de software y data
 
 - Puede que en el futuro estés buscando lo mismo y encuentres tu mismo post: te salvarás a ti mismo.
 
+- Pero también puede ser que no necesites buscarlo de nuevo porque escribirlo te hará recordar mejor eso.
+
 - Si alguien comenta o retroalimenta sobre lo que escribiste, mostrándote una forma mejor de hacerlo o expandiendo sobre lo que escribiste, habrás aprendido más.
 
 - Tu redacción mejorará.
