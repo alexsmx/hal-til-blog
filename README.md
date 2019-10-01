@@ -1,5 +1,7 @@
 # HAL - Today I learned
 
+![Logo HAL](https://res.cloudinary.com/hectorip/image/upload/v1569905724/hal_orange_ky85bn.png)
+
 En este blog compartiremos lo que vamos aprendiendo en los proyectos de desarrollo de software.
 
 Encontrarás aspectos prácticos de programación, desarrollo de software y data science.
