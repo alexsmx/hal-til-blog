@@ -28,8 +28,8 @@ Encontrarás aspectos prácticos de programación, desarrollo de software y data
 ## Contribuye
 
 1. Clona este repo
-2. Sigue la guía de instalación de Hugo
-3. Crea tu post y has un pull request, pero antes
+2. Sigue la guía de instalación de [Hugo](https://gohugo.io/getting-started/quick-start/), pero en vez crear un nuevo proyecto usa este
+3. Crea tu post y has un pull request, pero antes:
     1. Revisa tu ortografía
     2. Revisa tu redacción
     3. Intenta que tu post contribuya algo a la comunidad: piensa en StackOverflow, Simple is better than complex, los tutoriales de DigitalOcean o cualquier página que salga frecuentemente en los resultados de google cuando buscas respuestas.
@@ -38,7 +38,7 @@ Encontrarás aspectos prácticos de programación, desarrollo de software y data
 
 ### ¿Qué gano yo?
 
-- Cuando alguien comparte su conocimiento este crece y solidifica al externarlo, en este caso poniéndolo por escrito.
+- Cuando alguien comparte su conocimiento este crece y solidifica al escribirlo, en este caso poniéndolo por escrito.
 
 - Después de un conjunto considerable de posts que de verdad contribuyan para ayudar a alguien ganarás reputación como alguien con conocimiento y que puede y tiene el deseo de ayudar a otros. Este cuerpo de trabajo acumulado a través del tiempo es difícil de superar para demostrar tu valor como desarrollador/contribuidor de la sociedad.
 
