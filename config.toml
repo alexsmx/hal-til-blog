@@ -1,8 +1,12 @@
 baseURL = "https://til.hal.com.mx/"
-languageCode = "es-mx"
-title = "HAL Today I learned"
+languageCode = "es-MX"
+title = "HAL Today I Learned"
 theme="twentynineteen"
 publishdir="docs"
+
+[params]
+    accent_color = "#FF0000"
+
 [menu]
     [[menu.social]]
         identifier = "github"
