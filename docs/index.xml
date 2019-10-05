@@ -5,7 +5,7 @@
     <link>https://til.hal.com.mx/</link>
     <description>Recent content on HAL Today I Learned</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>es-MX</language>
+    <language>es-mx</language>
     <lastBuildDate>Fri, 20 Sep 2019 18:56:30 -0500</lastBuildDate>
     
 	<atom:link href="https://til.hal.com.mx/index.xml" rel="self" type="application/rss+xml" />
@@ -17,8 +17,7 @@
       <pubDate>Fri, 20 Sep 2019 18:56:30 -0500</pubDate>
       
       <guid>https://til.hal.com.mx/posts/presentacion/</guid>
-      <description>En este blog compartiremos hallazgos, aprendizajes y experiencias de parte de los desarrolladores de HAL, una empresa dedicada a crear productos digitales innovadores.
-Las entradas en este blog te pueden ahorrar una buen tiempo de trabajo,</description>
+      <description>En este blog compartiremos hallazgos, aprendizajes y experiencias de parte de los desarrolladores de HAL, una empresa dedicada a crear productos digitales innovadores.</description>
     </item>
     
   </channel>

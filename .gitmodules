@@ -4,3 +4,6 @@
 [submodule "themes/twentynineteen"]
 	path = themes/twentynineteen
 	url = https://github.com/jeremybise/twentynineteen-hugo.git
+[submodule "themes/twentynineteen-hal"]
+	path = themes/twentynineteen-hal
+	url = git@github.com:hectorip/twentynineteen-hugo.git

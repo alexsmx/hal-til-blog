@@ -1,11 +1,13 @@
 baseURL = "https://til.hal.com.mx/"
-languageCode = "es-MX"
+languageCode = "es-mx"
 title = "HAL Today I Learned"
-theme="twentynineteen"
+theme="twentynineteen-hal"
 publishdir="docs"
 
 [params]
-    accent_color = "#FF0000"
+    accent_color = "#EE0000"
+    body_font = "Source Sans Pro"
+    using_google_fonts = 1
 
 [menu]
     [[menu.social]]

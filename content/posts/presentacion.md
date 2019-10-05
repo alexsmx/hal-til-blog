@@ -6,7 +6,3 @@ draft: false
 
 En este blog compartiremos hallazgos, aprendizajes y experiencias de parte de los desarrolladores de HAL, una empresa 
 dedicada a crear productos digitales innovadores.
-
-Las entradas en este blog te pueden ahorrar una buen tiempo de trabajo, 
-
-
