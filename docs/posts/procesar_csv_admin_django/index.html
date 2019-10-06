@@ -4,7 +4,7 @@
 	<meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
-  <title> Procesar CSV en Admin de Django | HAL Today I Learned</title>
+  <title> Procesar archivo CSV en Admin de Django | HAL Today I Learned</title>
 
   
   
@@ -16,8 +16,10 @@
   
 
   
-<link rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/solarized-dark.min.css">
+  
+  <link rel="stylesheet"
+        href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/shades-of-purple.min.css'>
+  
 
 </head>
 
@@ -118,7 +120,7 @@
   <article class="post entry">
     
       <header class="entry-header">
-        <h1 class="entry-title">Procesar CSV en Admin de Django</h1>
+        <h1 class="entry-title">Procesar archivo CSV en Admin de Django</h1>
         <div class="entry-meta">
           <span class="posted-on">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -155,7 +157,11 @@
   
   
   
-  <a href="https://til.hal.com.mx/tags/django/" rel="category tag">Django</a>, <a href="https://til.hal.com.mx/tags/python/" rel="category tag">python</a>, <a href="https://til.hal.com.mx/tags/csv/" rel="category tag">csv</a>
+  
+  
+  
+  
+  <a href="https://til.hal.com.mx/tags/django/" rel="category tag">Django</a>, <a href="https://til.hal.com.mx/tags/django-admin/" rel="category tag">Django Admin</a>, <a href="https://til.hal.com.mx/tags/python/" rel="category tag">python</a>, <a href="https://til.hal.com.mx/tags/csv/" rel="category tag">csv</a>
 </span>
 
 
@@ -165,18 +171,17 @@
       </header>
     
     <div class="entry-content">
-      <p>La semana pasada tuve la tarea  crear una vista del administrador de Django que procesara un CSV, sin ser explícitamente un modelo (para lo cuál ya existe un paquete -&gt; <a href="https://pypi.org/project/django-csvimport/">Django CSV Import</a>). El caso era que los usuarios finales requieren subir un CSV más amigable que la represenación de los datos que creamos con los modelos.</p>
+      <p>La semana pasada tuve la tarea crear una vista del administrador de Django que procesara un CSV, sin ser explícitamente un modelo (para lo cuál ya existe un paquete -&gt; <a href="https://pypi.org/project/django-csvimport/">Django CSV Import</a>). El caso era que los usuarios finales requieren subir un CSV más amigable que la representación de los datos que creamos con los modelos.</p>
 
-<p>Investigando un poco encontré varias sugerencias que no se adecuaban a nuestro caso y algunas soluciones bastante limitadas, como procesar el archivo como dividiéndolo con saltos de línea: esta solución sólo funciona si estás seguro que el contenido del archivo no contiene saltos de línea en sí mismo.</p>
+<p>Investigando un poco encontré varias sugerencias que no se adecuaban a nuestro caso y algunas soluciones bastante limitadas, como procesar el archivo dividiéndolo con saltos de línea (&lsquo;cadena&rsquo;.split(&rsquo;\n&rsquo;)): esta solución sólo funciona si estás seguro que el contenido del archivo no contiene saltos de línea en sí mismo.</p>
 
-<p>Así que si necesitas implementar el procesamiento de un CSV aquí tienes un pequeño script que puedes integrar en tu código:</p>
+<p>Aquí esta un ejemplo de parte del código que me permitió resolver el problema:</p>
 
-<pre><code>from django import forms
+<pre><code class="language-python">from django import forms
 
 class CSVContainingForm(forms.ModelForm):
     &quot;&quot;&quot;
     Formulario creado a medida que agrega el campo CSV a un formulario de modelo.
-
     &quot;&quot;&quot;
     
     class Meta:
@@ -191,17 +196,28 @@ class CSVContainingForm(forms.ModelForm):
         &quot;&quot;&quot;
         Esta función se llamará cuando el modelo sea salvado.
         &quot;&quot;&quot;
-        csv_file = self.cleaned_data.get('csv_file', None) # Contiene el archivo si lo subieron
+        # 1) Obtener el archivo del formulario
+        csv_file = self.cleaned_data.get('csv_file', None)
 
         if csv_file:
-            # csv_file es un archivo binario sin ningeun tipo de codificación,
-            # hay que codificarlo
+            # 2) Codificamos
             with io.TextIOWrapper(csv_file, encoding=&quot;utf-8&quot;) as f:
                 reader = csv.reader(f)
-                # Haz lo que quieras con el archivo
+                # Procesa cada línea del CSV como necesites
 
-
+        return super(PTForm, self).save(commit=commit)
 </code></pre>
+
+<p>Los puntos importantes del código anterior son los siguientes:</p>
+
+<ol>
+<li><p><code>csv_file</code> contiene una referencia al archivo que puede ser leída con el método <code>read()</code>, pero no nos sirve porque devuelve un archivo leído como binario sin codificación, el módulo CSV no puede procesar.</p></li>
+
+<li><p><code>io.TextIOWrapper</code> nos permite leer el archivo y codificarlo como UTF-8, listo para ser procesado por el paquete <code>csv</code> de python.</p></li>
+</ol>
+
+<p>Estos son los dos puntos importantes.
+Este formulario puede ser usado para reemplazar el formulario default de un <code>ModelAdmin</code>.</p>
 
     </div>
     <div class="entry-footer">
@@ -240,7 +256,11 @@ class CSVContainingForm(forms.ModelForm):
   
   
   
-  <a href="https://til.hal.com.mx/tags/django/" rel="category tag">Django</a>, <a href="https://til.hal.com.mx/tags/python/" rel="category tag">python</a>, <a href="https://til.hal.com.mx/tags/csv/" rel="category tag">csv</a>
+  
+  
+  
+  
+  <a href="https://til.hal.com.mx/tags/django/" rel="category tag">Django</a>, <a href="https://til.hal.com.mx/tags/django-admin/" rel="category tag">Django Admin</a>, <a href="https://til.hal.com.mx/tags/python/" rel="category tag">python</a>, <a href="https://til.hal.com.mx/tags/csv/" rel="category tag">csv</a>
 </span>
 
 
@@ -287,7 +307,7 @@ class CSVContainingForm(forms.ModelForm):
       <ul>
         
         <li>
-          <a href="/posts/procesar_csv_admin_django/">Procesar CSV en Admin de Django</a>
+          <a href="/posts/procesar_csv_admin_django/">Procesar archivo CSV en Admin de Django</a>
         </li>
         
         <li>
@@ -308,6 +328,10 @@ class CSVContainingForm(forms.ModelForm):
           
           <li class="cat-item">
             <a href="/tags/django/">Django</a>
+          </li>
+          
+          <li class="cat-item">
+            <a href="/tags/django-admin/">Django Admin</a>
           </li>
           
           <li class="cat-item">
@@ -339,13 +363,15 @@ class CSVContainingForm(forms.ModelForm):
   </div>
 
   
+  
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
-<script>
-hljs.initHighlightingOnLoad();
-</script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+  <script>
+  hljs.initHighlightingOnLoad();
+  </script>
 
   
+
   
   
   

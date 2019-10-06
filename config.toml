@@ -8,6 +8,7 @@ publishdir="docs"
     accent_color = "#EE0000"
     body_font = "Source Sans Pro"
     using_google_fonts = 1
+    code_theme = "shades-of-purple"
 
 [menu]
     [[menu.social]]
