@@ -15,3 +15,6 @@ publishdir="docs"
         identifier = "github"
         name = "Github"
         url = "https://github.com/HAL-DEV/hal-til-blog"
+
+
+googleAnalytics = "G-BZM6JQ4ZW"
