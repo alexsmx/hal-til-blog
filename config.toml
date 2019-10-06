@@ -3,6 +3,7 @@ languageCode = "es-mx"
 title = "HAL Today I Learned"
 theme="twentynineteen-hal"
 publishdir="docs"
+googleAnalytics = "G-BZM6JQ4ZW"
 
 [params]
     accent_color = "#EE0000"
@@ -16,5 +17,3 @@ publishdir="docs"
         name = "Github"
         url = "https://github.com/HAL-DEV/hal-til-blog"
 
-
-googleAnalytics = "G-BZM6JQ4ZW"
