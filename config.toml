@@ -3,7 +3,7 @@ languageCode = "es-mx"
 title = "HAL Today I Learned"
 theme="twentynineteen-hal"
 publishdir="docs"
-googleAnalytics = "G-BZM6JQ4ZW"
+googleAnalytics = "G-BZM6JQ4ZWC"
 
 [params]
     accent_color = "#EE0000"
