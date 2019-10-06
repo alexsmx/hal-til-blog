@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>HAL Today I Learned</title>
-    <link>https://til.hal.com.mx/</link>
-    <description>Recent content on HAL Today I Learned</description>
+    <title>csv on HAL Today I Learned</title>
+    <link>https://til.hal.com.mx/tags/csv/</link>
+    <description>Recent content in csv on HAL Today I Learned</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-mx</language>
     <lastBuildDate>Sat, 05 Oct 2019 09:03:38 -0500</lastBuildDate>
     
-	<atom:link href="https://til.hal.com.mx/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://til.hal.com.mx/tags/csv/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,15 +19,6 @@
       <guid>https://til.hal.com.mx/posts/procesar_csv_admin_django/</guid>
       <description>La semana pasada tuve la tarea crear una vista del administrador de Django que procesara un CSV, sin ser explícitamente un modelo (para lo cuál ya existe un paquete -&amp;gt; Django CSV Import). El caso era que los usuarios finales requieren subir un CSV más amigable que la represenación de los datos que creamos con los modelos.
 Investigando un poco encontré varias sugerencias que no se adecuaban a nuestro caso y algunas soluciones bastante limitadas, como procesar el archivo como dividiéndolo con saltos de línea: esta solución sólo funciona si estás seguro que el contenido del archivo no contiene saltos de línea en sí mismo.</description>
-    </item>
-    
-    <item>
-      <title>HAL -&gt; Today I Learned</title>
-      <link>https://til.hal.com.mx/posts/presentacion/</link>
-      <pubDate>Fri, 20 Sep 2019 18:56:30 -0500</pubDate>
-      
-      <guid>https://til.hal.com.mx/posts/presentacion/</guid>
-      <description>En este blog compartiremos hallazgos, aprendizajes y experiencias de parte de los desarrolladores de HAL, una empresa dedicada a crear productos digitales innovadores.</description>
     </item>
     
   </channel>

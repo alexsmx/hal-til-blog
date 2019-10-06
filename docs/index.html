@@ -10,7 +10,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/main.min.98e12aed8218aeb4cab826b85e04e1ac3840dd0d1bef085e75d58fcc8a774fd8.css" integrity="sha256-mOEq7YIYrrTKuCa4XgThrDhA3Q0b7wheddWPzIp3T9g=" media="screen">
+  <link rel="stylesheet" href="/css/main.min.1848cf871ac440074c81089a4bb319605cef1ff31134fd952d226f0a41528fa0.css" integrity="sha256-GEjPhxrEQAdMgQiaS7MZYFzvH/MRNP2VLSJvCkFSj6A=" media="screen">
 
   
   
@@ -121,6 +121,72 @@
   <article class="post entry">
     <header class="entry-header">
       <h2 class="entry-title">
+        <a href="/posts/procesar_csv_admin_django/" rel="bookmark">Procesar CSV en Admin de Django</a>
+      </h2>
+    </header>
+
+    
+
+    <div class="entry-content">
+      La semana pasada tuve la tarea crear una vista del administrador de Django que procesara un CSV, sin ser explícitamente un modelo (para lo cuál ya existe un paquete -&gt; Django CSV Import). El caso era que los usuarios finales requieren subir un CSV más amigable que la represenación de los datos que creamos con los modelos.
+Investigando un poco encontré varias sugerencias que no se adecuaban a nuestro caso y algunas soluciones bastante limitadas, como procesar el archivo como dividiéndolo con saltos de línea: esta solución sólo funciona si estás seguro que el contenido del archivo no contiene saltos de línea en sí mismo.
+      
+        <div>
+          <a href="/posts/procesar_csv_admin_django/" class="more-link">
+            Continue reading
+          </a>
+        </div>
+      
+    </div>
+    
+    <footer class="entry-footer">
+      <span class="posted-on">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <defs>
+      <path id="a" d="M0 0h24v24H0V0z"></path>
+  </defs>
+  <clipPath id="b">
+      <use xlink:href="#a" overflow="visible"></use>
+  </clipPath>
+  <path clip-path="url(#b)" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"></path>
+</svg>
+  
+  <a href="/posts/procesar_csv_admin_django/">October 5, 2019</a>
+</span>
+
+
+
+<span class="tags-links">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+	<path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"></path>
+	<path d="M0 0h24v24H0z" fill="none"></path>
+</svg>
+  <span class="screen-reader-text">Posted in</span>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a href="https://til.hal.com.mx/tags/django/" rel="category tag">Django</a>, <a href="https://til.hal.com.mx/tags/python/" rel="category tag">python</a>, <a href="https://til.hal.com.mx/tags/csv/" rel="category tag">csv</a>
+</span>
+
+
+
+
+    </footer>
+  </article>
+
+  <article class="post entry">
+    <header class="entry-header">
+      <h2 class="entry-title">
         <a href="/posts/presentacion/" rel="bookmark">HAL -&gt; Today I Learned</a>
       </h2>
     </header>
@@ -180,12 +246,35 @@
       <ul>
         
         <li>
+          <a href="/posts/procesar_csv_admin_django/">Procesar CSV en Admin de Django</a>
+        </li>
+        
+        <li>
           <a href="/posts/presentacion/">HAL -&gt; Today I Learned</a>
         </li>
         
       </ul>
     </section>
 
+    
+      <section id="categories" class="widget widget_categories">
+        <h2 class="widget-title">Tags</h2>
+        <ul>
+          
+          <li class="cat-item">
+            <a href="/tags/csv/">csv</a>
+          </li>
+          
+          <li class="cat-item">
+            <a href="/tags/django/">Django</a>
+          </li>
+          
+          <li class="cat-item">
+            <a href="/tags/python/">python</a>
+          </li>
+          
+        </ul>
+      </section>
     
   </div>
 </aside>
