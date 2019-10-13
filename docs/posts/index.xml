@@ -6,10 +6,21 @@
     <description>Recent content in Posts on HAL Today I Learned</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-mx</language>
-    <lastBuildDate>Sat, 05 Oct 2019 09:03:38 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 11 Oct 2019 23:33:07 -0500</lastBuildDate>
     
 	<atom:link href="https://til.hal.com.mx/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Feather: data frames para Python y R</title>
+      <link>https://til.hal.com.mx/posts/feather_data_frames_para_python_r/</link>
+      <pubDate>Fri, 11 Oct 2019 23:33:07 -0500</pubDate>
+      
+      <guid>https://til.hal.com.mx/posts/feather_data_frames_para_python_r/</guid>
+      <description>Frecuentemente necesito usar en R un data frame generado en Python por Pandas, o viceversa, tengo datos en un data frame de R que quiero usar en Python.
+Una manera común para compartir data frames entre Python y R es exportarlas como archivos CSV. Este método tiene el inconveniente de que perdemos los metadatos de nuestro data frame.
+Si tenemos datos de fecha con husos horarios, factores de R, texto con codificación específica o con cualquier otro metadato, este se pierde al exportar un data frame a CSV.</description>
+    </item>
     
     <item>
       <title>Procesar archivo CSV en Admin de Django</title>
