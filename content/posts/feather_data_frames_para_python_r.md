@@ -4,6 +4,7 @@ date: 2019-10-11T23:33:07-05:00
 tags: ["python", "r"]
 draft: false
 has_code: true
+comments: true
 ---
 
 Frecuentemente necesito usar en R un data frame generado en Python por Pandas, o viceversa, tengo datos en un data frame de R que quiero usar en Python.
