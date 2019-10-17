@@ -4,6 +4,8 @@ title = "HAL Today I Learned"
 theme="twentynineteen-hal"
 publishdir="docs"
 googleAnalytics = "G-BZM6JQ4ZWC"
+disqusShortname = "today-i-learned-hal"
+
 
 [params]
     accent_color = "#EE0000"
@@ -16,5 +18,3 @@ googleAnalytics = "G-BZM6JQ4ZWC"
         identifier = "github"
         name = "Github"
         url = "https://github.com/HAL-DEV/hal-til-blog"
-
-disqusShortname = "today-i-learned-hal"
