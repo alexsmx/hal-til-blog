@@ -4,6 +4,7 @@ tags: ["Django", "Django Admin", "python", "csv"]
 date: 2019-10-05T09:03:38-05:00
 draft: false
 has_code: true
+comments: true
 ---
 
 La semana pasada tuve la tarea crear una vista del administrador de Django que procesara un CSV, sin ser explícitamente un modelo (para lo cuál ya existe un paquete -> [Django CSV Import](https://pypi.org/project/django-csvimport/)). El caso era que los usuarios finales requieren subir un CSV más amigable que la representación de los datos que creamos con los modelos.
