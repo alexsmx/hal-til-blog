@@ -3,32 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://til.hal.com.mx/posts/aplicar_funcion_por_renglon_usando_purrr/</loc>
+    <lastmod>2019-10-19T13:36:32-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://til.hal.com.mx/</loc>
+    <lastmod>2019-10-19T13:36:32-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://til.hal.com.mx/posts/</loc>
+    <lastmod>2019-10-19T13:36:32-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://til.hal.com.mx/tags/r/</loc>
+    <lastmod>2019-10-19T13:36:32-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://til.hal.com.mx/tags/</loc>
+    <lastmod>2019-10-19T13:36:32-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://til.hal.com.mx/posts/feather_data_frames_para_python_r/</loc>
     <lastmod>2019-10-11T23:33:07-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://til.hal.com.mx/</loc>
-    <lastmod>2019-10-11T23:33:07-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://til.hal.com.mx/posts/</loc>
-    <lastmod>2019-10-11T23:33:07-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://til.hal.com.mx/tags/python/</loc>
-    <lastmod>2019-10-11T23:33:07-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://til.hal.com.mx/tags/r/</loc>
-    <lastmod>2019-10-11T23:33:07-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://til.hal.com.mx/tags/</loc>
     <lastmod>2019-10-11T23:33:07-05:00</lastmod>
   </url>
   

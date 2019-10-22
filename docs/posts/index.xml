@@ -6,10 +6,22 @@
     <description>Recent content in Posts on HAL Today I Learned</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-mx</language>
-    <lastBuildDate>Fri, 11 Oct 2019 23:33:07 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 19 Oct 2019 13:36:32 -0500</lastBuildDate>
     
 	<atom:link href="https://til.hal.com.mx/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Aplicar una funcion a un data frame, por renglon, usando purrr</title>
+      <link>https://til.hal.com.mx/posts/aplicar_funcion_por_renglon_usando_purrr/</link>
+      <pubDate>Sat, 19 Oct 2019 13:36:32 -0500</pubDate>
+      
+      <guid>https://til.hal.com.mx/posts/aplicar_funcion_por_renglon_usando_purrr/</guid>
+      <description>purrr es un paquete de tidyverse que agrega características de programación funcional a R.
+Entre otras cosas, incluye la familia de funciones map(), que aplican una función a todos los elementos de una lista, de la misma manera a la familia de funciones apply() de base, pero con una mejor sintaxis y caraterísticas adicionales.
+Al usar map() con un data frame, entonces la función es aplicada por columna.
+Hay ocasiones en las necesitamos aplicar una función por renglón.</description>
+    </item>
     
     <item>
       <title>Feather: data frames para Python y R</title>

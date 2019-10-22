@@ -4,7 +4,7 @@
 	<meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
-  <title> HAL -&gt; Today I Learned | HAL Today I Learned</title>
+  <title> Aplicar una funcion a un data frame, por renglon, usando purrr | HAL Today I Learned</title>
 
   
   
@@ -117,7 +117,7 @@
   <article class="post entry">
     
       <header class="entry-header">
-        <h1 class="entry-title">HAL -&gt; Today I Learned</h1>
+        <h1 class="entry-title">Aplicar una funcion a un data frame, por renglon, usando purrr</h1>
         <div class="entry-meta">
           <span class="posted-on">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -130,10 +130,24 @@
   <path clip-path="url(#b)" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"></path>
 </svg>
   
-  <a href="/posts/presentacion/">September 20, 2019</a>
+  <a href="/posts/aplicar_funcion_por_renglon_usando_purrr/">October 19, 2019</a>
 </span>
 
 
+
+<span class="tags-links">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+	<path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"></path>
+	<path d="M0 0h24v24H0z" fill="none"></path>
+</svg>
+  <span class="screen-reader-text">Posted in</span>
+  
+  
+  
+  
+  
+  <a href="https://til.hal.com.mx/tags/r/" rel="category tag">r</a>
+</span>
 
 
 
@@ -142,8 +156,54 @@
       </header>
     
     <div class="entry-content">
-      <p>En este blog compartiremos hallazgos, aprendizajes y experiencias de parte de los desarrolladores de HAL, una empresa
-dedicada a crear productos digitales innovadores.</p>
+      <p><code>purrr</code> es un paquete de <code>tidyverse</code> que agrega características de programación funcional a R.</p>
+
+<p>Entre otras cosas, incluye la familia de funciones <code>map()</code>, que aplican una función a todos los elementos de una lista, de la misma manera a la familia de funciones <code>apply()</code> de <code>base</code>, pero con una mejor sintaxis y caraterísticas adicionales.</p>
+
+<p>Al usar <code>map()</code> con un data frame, entonces la función es aplicada por columna.</p>
+
+<p>Hay ocasiones en las necesitamos aplicar una función por renglón.</p>
+
+<p>Usando <code>apply()</code>, basta con especificar el argumento <code>MARGIN = 1</code> para aplicar una función por renglón.</p>
+
+<p>Por ejemplo, para sumar todos los datos de cada renglon de un data frame.</p>
+
+<pre><code class="language-r">apply(mi_df, sum, MARGIN = 1)
+</code></pre>
+
+<p><code>map()</code> no tiene un argumento <code>MARGIN</code>, pero tenemos la función <code>pmap()</code> en <code>purrr</code> que puede aplicar una función a cada renglón de un data frame.</p>
+
+<pre><code class="language-r">pmap(mid_df, sum)
+</code></pre>
+
+<p>Notarás que lo anterior solo funciona si todos los elementos de un cada renglón son numéricos, es decir, del tipo de dato que espera la función.</p>
+
+<p>Esto es porque <code>pmap()</code>, en realidad, está tomando todos los elementos de una lista como argumentos de la función que estamos aplicando.</p>
+
+<p>Por ejemplo, tomando las dos primeras columnas de <strong>iris</strong>, podemos hacer algo como lo siguiente.</p>
+
+<pre><code class="language-r">pmap(iris[1:2], function(Sepal.Length, Sepal.Width) {
+  Sepal.Length + Sepal.Width
+})
+</code></pre>
+
+<p>El resultado será una lista con 150 valores numéricos, que es la cantidad de renglones de iris.</p>
+
+<p>Si deseas usar <code>pmap()</code> con data frames, debes hacer referencia a todos los nombres de columnas, aunque no sean usados en la función, de lo contrario, obtendrás un error.</p>
+
+<p>Los siguiente funciona.</p>
+
+<pre><code class="language-r">pmap(iris, function(Sepal.Length, Sepal.Width, Petal.Length,Petal.Width, Species) {
+    Petal.Width ^ 2
+})
+</code></pre>
+
+<p>Pero lo siguiente no</p>
+
+<pre><code class="language-r">pmap(iris, function(Petal.Width) {
+    Petal.Width ^ 2
+})
+</code></pre>
 
     </div>
     <div class="entry-footer">
@@ -158,10 +218,24 @@ dedicada a crear productos digitales innovadores.</p>
   <path clip-path="url(#b)" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"></path>
 </svg>
   
-  <a href="/posts/presentacion/">September 20, 2019</a>
+  <a href="/posts/aplicar_funcion_por_renglon_usando_purrr/">October 19, 2019</a>
 </span>
 
 
+
+<span class="tags-links">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+	<path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"></path>
+	<path d="M0 0h24v24H0z" fill="none"></path>
+</svg>
+  <span class="screen-reader-text">Posted in</span>
+  
+  
+  
+  
+  
+  <a href="https://til.hal.com.mx/tags/r/" rel="category tag">r</a>
+</span>
 
 
 
@@ -172,16 +246,16 @@ dedicada a crear productos digitales innovadores.</p>
     <h2 class="screen-reader-text">Post navigation</h2>
     <div class="nav-links">
       
+        <div class="nav-previous">
+          <a href="https://til.hal.com.mx/posts/feather_data_frames_para_python_r/" rel="prev">
+            <span class="meta-nav" aria-hidden="true">Previous post</span>
+            <span class="screen-reader-text">Previous post:</span>
+            <br>
+            <span class="post-title">Feather: data frames para Python y R</span>
+          </a>
+        </div>
       
-      <div class="nav-next">
-        <a href="https://til.hal.com.mx/posts/procesar_csv_admin_django/" rel="next">
-          <span class="meta-nav" aria-hidden="true">Next post</span>
-          <span class="screen-reader-text">Next post:</span>
-          <br>
-          <span class="post-title">Procesar archivo CSV en Admin de Django</span>
-        </a>
-      </div>
-    
+      
     </div>
   </nav>
 

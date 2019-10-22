@@ -6,10 +6,19 @@
     <description>Recent content in Tags on HAL Today I Learned</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-mx</language>
-    <lastBuildDate>Fri, 11 Oct 2019 23:33:07 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 19 Oct 2019 13:36:32 -0500</lastBuildDate>
     
 	<atom:link href="https://til.hal.com.mx/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>r</title>
+      <link>https://til.hal.com.mx/tags/r/</link>
+      <pubDate>Sat, 19 Oct 2019 13:36:32 -0500</pubDate>
+      
+      <guid>https://til.hal.com.mx/tags/r/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>python</title>
@@ -17,15 +26,6 @@
       <pubDate>Fri, 11 Oct 2019 23:33:07 -0500</pubDate>
       
       <guid>https://til.hal.com.mx/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>r</title>
-      <link>https://til.hal.com.mx/tags/r/</link>
-      <pubDate>Fri, 11 Oct 2019 23:33:07 -0500</pubDate>
-      
-      <guid>https://til.hal.com.mx/tags/r/</guid>
       <description></description>
     </item>
     
